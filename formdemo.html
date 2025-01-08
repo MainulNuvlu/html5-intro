@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Demo Form</title>
+        <link rel="stylesheet" href="styles/formdemo.css">
+    </head>
+
+    <body>
+        <h1>Every kind of form element</h1>
+        <hr>
+        <div class="demo">
+            <form action="">
+                <h4>User Name</h4>
+                <input type="text" name="name" id="name"> A value is required.
+                <hr>
+
+                <h4>Password</h4>
+                <input type="password" name="password" id="password">
+                <hr>
+
+                <h4>Description</h4>
+                <textarea name="description" id="description" rows="3" cols="20">Enter the description here.</textarea>
+                <hr>
+
+                <h4>Pick One</h4>
+                <label for="rad1"></label>
+                <input type="radio" name="option2" id="rad1">Choice 1 - is pre-selected and shows the text wrap
+                nicely
+                if it
+                goes to multiple
+                lines.
+                <label for="rad2"></label>
+                <input type="radio" name="option2" id="rad2">Choice 2 - this shows the text wrap nicely if it
+                goes to
+                multiple
+                lines.
+
+                <hr>
+
+                <h4>Pick any</h4>
+                <label for="check1">
+                    <input type="checkbox" name="check" id="check1">Choice 1
+                </label>
+                <label for="check2">
+                    <input type="checkbox" name="check" id="check2" checked>Choice 2
+                </label>
+                <label for="check3">
+                    <input type="checkbox" name="check" id="check3">Choice 3
+                </label>
+                <hr>
+
+                <h4>Need a Drink?</h4>
+                <select name="drink" id="drink">
+                    <option value="none">Choose One</option>
+                    <option value="soda">Soda</option>
+                    <option value="water">Water</option>
+                    <option value="juice">Juice</option>
+                    <option value="diet_soda">Diet Soda</option>
+                </select>
+                <hr>
+
+                <p> <input type="submit" value="Submit This Form"></p>
+
+            </form>
+        </div>
+    </body>
+
+</html>

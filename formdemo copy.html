@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>FormDemo</title>
+        <link rel="stylesheet" href="file.css">
+    </head>
+
+    <body background="img/My Love/">
+
+
+        <button>Submit</button>
+
+        <form action="/todolist" class="1st">
+
+
+            <!-- default type of button tag is ""submit"" -->
+            <!-- if u put button in "type" attribute, the button only acts like a button -->
+            <button type="button">Submit</button><br>
+
+
+            <!-- "name" attribute is used for send the data to the server. Its a very important attribute in form -->
+
+            <label for="userid"><u>Username:</u></label>
+            <input id="userid" type="text" placeholder="Username" name="username">
+            <br>
+
+            <label for="password">Enter your Password:</label>
+            <input type="password" name="password" id="password" placeholder="Enter Pawssword"><br>
+
+            <label for="number">Enter your ID number:</label>
+            <input type="number" name="number" id="number" placeholder="Enter a Number" min="100" max="1000"><br>
+
+            <label for="color">Pick your favourite color:</label>
+            <input type="color" name="color" id="color"><br><br>
+
+
+
+            <!--    Valid Approach for labeling input into <label> tag    -->
+            <label>
+                Enter your First Name:
+                <input type="text" name="" id="">
+            </label>
+
+
+            <input type="month" name="" id="">
+            <input type="time" name="" id="">
+            <input type="date" name="" id="">
+            <input type="datetime-local" name="" id=""><br><br>
+
+            Normal submit button:
+            <button>Submit</button><br><br>
+            <hr>
+
+            <!-- another possible approach for submit button. But you can't change the text in the button. It always will be "submit". to change the test in the button, you need to use "value attribute"  -->
+            <input type="submit" value="Click me">
+
+        </form>
+
+
+
+        <h2>Hijacking Searches</h2>
+
+        <form action="https://www.youtube.com/results">
+            <p>
+            <h3>Youtube</h3>
+            <!-- <label for="searchyoutube">Search in YouTube:</label> -->
+            <input type="text" name="search_query" id="searchyoutube" placeholder="Search">
+            <button> Search Youtube </button>
+            </p>
+        </form>
+
+
+
+
+        <form action="https://www.google.com/search">
+            <p>
+            <h3>Google</h3>
+            <!-- <label for="searchgoogle">Search in Google:</label> -->
+            <input type="text" name="q" id="searchgoogle" placeholder="Search Here">
+            <button> Search Google </button>
+            </p>
+        </form>
+
+
+        <form action="">
+            <label for="comment">Comment your idea:</label><br>
+            <textarea name="comment" id="comment" rows="5" cols="30" placeholder="Comment Here:"></textarea>
+        </form>
+
+        <p>
+            This is a paragraph. A quick brown fox jumps over the lazy dog. A quick brown fox jumps over the lazy dog. A
+            quick brown fox jumps over the lazy dog. A quick brown fox jumps over the lazy dog. </p>
+
+
+        <form action="https://www.youtube.com/search">
+            <input type="text" name="search_query" id="">
+        </form>
+        <!-- it also submits the form by pressing enter without adding submit button -->
+
+        <hr width="950px" size="5px" color="green" align="left">
+
+
+        <form action="/service">
+            <label for="tos">I agree with everything</label>
+            <input type="checkbox" name="agree_tos" id="tos" checked>
+            <button>Submit</button>
+        </form>
+
+        <!-- in a group of checkbox item, you can check as many as you can. -->
+
+        <form action="/meal">
+            <p>
+            <h3>Main menu:</h3>
+            <label for="rice">Rice</label>
+            <input type="checkbox" name="rice" id="rice" checked><br>
+
+            <label for="potato">Potato</label>
+            <input type="checkbox" name="potato" id="potato"><br>
+
+            <label for="fish">Fish</label>
+            <input type="checkbox" name="fish" id="fish"></p>
+
+
+            <!-- In a group of radio button, you can only select one. -->
+            <!-- To associate then in a group, we need to give them same exact 'name'. -->
+            <!-- We need to add 'value' attribute to send the selected item in the server -->
+            <p>
+            <h3>Side menu:</h3>
+
+            <label for="soup">Soup</label>
+            <input type="radio" name="side_dish" id="soup" value="soup"><br>
+
+            <label for="curry">Curry</label>
+            <input type="radio" name="side_dish" id="curry" value="curry"><br>
+
+            <label for="sauce">Sauce</label>
+            <input type="radio" name="side_dish" id="sauce" value="sauce"><br></p>
+
+
+
+            <p><label for="element">Select your prefered food element:</label>
+                <select name="element" id="element">
+                    <option value="">--Choose an option--</option>
+                    <option value="carbohydrate">Carbohydrate</option>
+                    <option value="protein">Protein</option>
+                    <!-- To preselect in option element, we need to use 'selected' attribute -->
+                    <option value="fat">Fat</option>
+                    <option value="water">Water</option>
+                    <option value="vitamin">Vitamin</option>
+                    <option value="salt">Salt</option>
+                </select>
+
+            </p>
+
+            <p>
+                <label for="volume">Amount of volume:</label>
+                <input type="range" name="volume" id="volume" min="0" max="100" value="75">
+                <!-- "step" attribute is used for adding step in range input -->
+                <!-- "value" attribute is used for adding initial value in range input-->
+                <!-- you can use "step" and "max min" attribute in number input type -->
+            </p>
+            <button>Submit</button>
+        </form><br><br><br>
+
+
+        <form action="/dummy">
+            <label for="first">Enter First name:</label>
+            <input type="text" name="first" id="first" required>
+            <!-- "required" attribute ====== We cant submit the form if the "required" input is not filled-->
+            <p>
+                <label for="user">Username:</label>
+                <input type="text" name="user" id="user" minlength="5" maxlength="20" required>
+                <!-- "minlength" and "maxlength" is used to determine/validate the length of a input. -->
+            </p>
+            <p>
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="email" placeholder="Enter your email" required>
+                <!-- "pattern" attribute is used for accepting input in certain type of item/charecters -->
+            </p>
+            <p>
+                <label for="url">URL:</label>
+                <input type="url" name="url" id="url" placeholder="Enter URL" required>
+            </p>
+            <button>Submit</button>
+        </form>
+
+
+        <!-- shortcut emmet for radiio input === ""input:radio""" -->
+
+
+
+    </body>
+
+</html>

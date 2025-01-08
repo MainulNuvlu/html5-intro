@@ -1,0 +1,33 @@
+* {
+    margin: ;
+}
+
+label {
+    font-weight: ;
+    display: block;
+
+}
+
+h4 {
+    padding: 0px;
+    margin: 5px 2px;
+}
+
+select[name="drink"] {
+    border-radius: 5px;
+}
+
+input[type="text"] {
+    color: ;
+}
+
+input[type="submit"] {
+    border-radius: 10px;
+    border-width: ;
+}
+
+p {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
